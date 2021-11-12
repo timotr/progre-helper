@@ -6,7 +6,7 @@ function minuFunktsioon(a,b) {
   return a+b
 }
 
-let minuFunktsioon = (a,b) {
+let minuFunktsioon = (a,b) => {
   return a+b
 }
 
