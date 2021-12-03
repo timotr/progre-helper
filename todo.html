@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Tere
+    <input id="kast" onkeyup="lisaRida(event)" />
+    <button onclick="lisaRida(event)">Lisa uus</button>
+    <ul id="list">
+        
+    </ul>
+
+    <script>
+        function lisaRida(event) {
+            console.log(event, event.hasOwnProperty('key'))
+            if ('key' in event && event.key != "Enter")
+                return;
+
+            let uusTekst = document.body.children[0].value
+            console.log(uusTekst)
+
+            let li = document.createElement("li");
+            li.onclick = function() {
+                if (li.style.textDecoration == "line-through")
+                    li.style.textDecoration = "none"
+                else
+                    li.style.textDecoration = "line-through"
+            }
+            li.textContent = uusTekst;
+
+            let del = document.createElement("button");
+            del.textContent = "Kustuta"
+            del.onclick = function(event) {
+                console.log(event)
+                event.target.parentElement.remove();
+            }
+            li.appendChild(del);
+
+            let element = document.getElementById("list");
+            element.appendChild(li);
+        }
+    </script>
+</body>
+</html>
