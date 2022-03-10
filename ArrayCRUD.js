@@ -22,9 +22,9 @@ list[4] // undefined
 
 list.length // mitu elementi listis on
 // viimane element
-list[5-1]  // undefined
+list[list.length-1]  // undefined
 // eelviimane element
-list      // null
+list[list.length-2]      // null
 
 // kuidas leida array sees element
 // tagastab kus positisoonil element arrays on
