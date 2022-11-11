@@ -39,6 +39,11 @@ let tellimus = {
 let data
 // Variant 1
 data = "articleId;name;productCode;price;amount;vat\n";
+// Variant 3
+for (let key in product) {
+    data += key + ";"
+}
+data += "\n"
 // Variant 4
 data = Object.keys(product).reduce((data, key) => data + ";" + key) + "\n"
 
