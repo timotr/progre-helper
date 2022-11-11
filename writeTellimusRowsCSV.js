@@ -37,17 +37,18 @@ let tellimus = {
 }
 
 let data
+// CSV Header
 // Variant 1
-data = "articleId;name;productCode;price;amount;vat\n";
+data = "articleId;name;productCode;price;amount;vat\n"
 // Variant 3
-for (let key in product) {
+for (let key in tellimus.rows[0]) {
     data += key + ";"
 }
 data += "\n"
 // Variant 4
-data = Object.keys(product).reduce((data, key) => data + ";" + key) + "\n"
+data = Object.keys(tellimus.rows[0]).reduce((data, key) => data + ";" + key) + "\n"
 // Variant 5
-data = Object.keys(product).join(";") + "\n"
+data = Object.keys(tellimus.rows[0]).join(";") + "\n"
 
 for (let product of tellimus.rows) {
     // Variant 1 - string concatenation
