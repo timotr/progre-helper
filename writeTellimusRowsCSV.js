@@ -46,6 +46,8 @@ for (let key in product) {
 data += "\n"
 // Variant 4
 data = Object.keys(product).reduce((data, key) => data + ";" + key) + "\n"
+// Variant 5
+data = Object.keys(product).join(";") + "\n"
 
 for (let product of tellimus.rows) {
     // Variant 1 - string concatenation
@@ -63,6 +65,9 @@ for (let product of tellimus.rows) {
 
     // Variant 4 - sama mis Variant 3 aga functional lähenemisega
     data += Object.values(product).reduce((data, value) => data + ";" + value) + "\n"
+    
+    // Variant 5
+    data = Object.values(product).join(";") + "\n"
 }
 
 
