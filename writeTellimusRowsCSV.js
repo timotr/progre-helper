@@ -67,7 +67,7 @@ for (let product of tellimus.rows) {
     data += Object.values(product).reduce((data, value) => data + ";" + value) + "\n"
     
     // Variant 5
-    data = Object.values(product).join(";") + "\n"
+    data += Object.values(product).join(";") + "\n"
 }
 
 
