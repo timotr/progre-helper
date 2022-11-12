@@ -55,7 +55,7 @@ for (let product of tellimus.rows) {
     data += product.article_id+";"+product.name+";"+product.product_code+";"+product.price+";"+product.amount+";"+product.vat+"\n"
 
     // Variant 2 - destructuring + string concatenation
-    let {article_id, name, product_code, price, vat} = product;
+    let {article_id, name, product_code, price, amount, vat} = product;
     data += article_id+";"+name+";"+product_code+";"+price+";"+amount+";"+vat+"\n"
 
     // Variant 3 - looping object properties/values + string concatenation
